@@ -12,6 +12,6 @@ def rasters(filename):
         filename (str): The path to the raster file to be served.
 
     Returns:
-        Response: The file response for downloading or viewing the specified raster file.
+        Response: The file response for the specified raster file.
     """
     return send_from_directory('static/rasters', filename)
