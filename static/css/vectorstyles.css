@@ -1,0 +1,132 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#map {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#controls {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    display: flex;
+    gap: 5px;
+    flex-direction: row; /* Horizontal layout */
+    flex-wrap: nowrap; /* Prevent wrapping to a new line */
+    align-items: center;
+    max-width: 100%; /* Ensures it doesn't exceed screen width */
+}
+
+#controls h2 {
+    margin: 0;
+    font-size: 12px;
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745; /* Vibrant green */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Ensure button text stays on one line */
+}
+
+button:hover {
+    background-color: #218838; /* Slightly darker green */
+}
+
+button.selected {
+    background-color: #1e7e34; /* Darker shade for selected */
+}
+
+#sidebar {
+    position: absolute;
+    left: 10px;
+    width: 250px;
+    background-color: #E6F2E6;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+.tree-card img {
+    width: 100%;
+    height: auto;
+    max-width: 150px; 
+    max-height: 300px;
+    display: block; /* Ensures block-level rendering */
+}
+
+.tree-card {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.leaflet-control-layers-overlays label {
+    display: flex;
+    align-items: center;
+}
+
+/* Media query for smaller screens */
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    #sidebar {
+        width: 90%;
+        height: auto;
+        bottom: 10px;
+        left: 5%;
+        top: auto;
+        transform: none;
+    }
+    .tree-card img {
+        display: none; /* Hide the image on small screens */
+    }
+    #controls {
+        top: 80px;
+        left: 5%;
+        transform: none;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+        padding: 5px; /* Reduce padding */
+        width: auto; /* Set to auto for slimmer controls */
+        max-width: 100px; /* Limit overall width */
+    }
+
+    button {
+        width: 100%; 
+        padding: 6px 10px; /* Reduce button padding */
+        font-size: 10px; /* Adjust font size */
+    }
+
+    #controls h2 {
+        font-size: 10px; /* Smaller font size for heading */
+        margin-bottom: 5px; /* Reduce space below heading */
+    }
+}
+

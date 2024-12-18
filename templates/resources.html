@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="static/css/resourcesstyles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Quantifying Carbon Stock: the Roseburn Path</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}" class="home-btn">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+    <div class="resource-section">
+        <h2>Campaign Links</h2>
+        <ul>
+            <li><a href="https://www.savetheroseburnpath.com/" target="_blank">Save the Roseburn Path Campaign</a></li>
+            <li><a href="https://www.edinburghlibdems.org/roseburn-path" target="_blank">Save the Telford / Roseburn Path – Edinburgh Liberal Democrats</a></li>
+        </ul>
+    </div>
+    
+    <div class="resource-section">
+        <h2>Reports</h2>
+        <p>
+            <a href="{{ url_for('download_file', filename='roseburn_path_report.pdf') }}" download>Download Our Report – Quantifying the Carbon Stock of the Roseburn Path (.PDF)</a>
+        </p>
+    </div>
+    
+    <div class="resource-section">
+        <h2>Our Data</h2>
+        <p>
+            <a href="{{ url_for('download_file', filename='roseburn_path_data.zip') }}" download>Download All Data (.zip)</a>
+        </p>
+        <ul>
+            <li><a href="{{ url_for('download_file', filename='roseburntrees.csv') }}" download>Download CSV Data (.csv)</a></li>
+            <p>How to import csv file into your GIS software?
+                <div style="align-items: left;">
+                <strong>Step.1</strong> Download and extract the compressed file.
+                <br>
+                <strong>Step.2</strong> Open 'Delimited Text' tab, choose the csv file, then click 'add'.
+                <br>
+                <img src="static\img\import_tutorial1.png" style="height: 500px">
+                <br>
+                <strong>Step.3</strong> Check our plots on your computer!
+                <br>
+                <img src="static\img\import_tutorial2.png" style="height: 500px">
+            </p>
+            <li><a href="{{ url_for('download_file', filename='boundary&tramline.zip') }}" download>Download Boundary and Tramline Data (.zip)</a></li>
+            <li><a href="{{ url_for('download_file', filename='carbon&biomass.zip') }}" download>Download the Result of Biomass and Carbon (.tif files in a .zip)</a></li>
+        </ul>
+    </div>
+</main>
+</body>
+</html>

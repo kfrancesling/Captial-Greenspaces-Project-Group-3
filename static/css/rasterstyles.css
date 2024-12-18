@@ -1,0 +1,53 @@
+#rasterMap {
+    width: 100%;
+    height: 570px;
+}
+
+.info, .legend {
+    padding: 10px;
+    background: white;
+    border: 1px solid #ccc;
+}
+
+.legend .colour-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.legend-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.info {
+    font-size: 16px; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+    padding: 10px; /* Add some padding */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.info {
+    font-size: 16px; /* Default font size for larger screens */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .info {
+        font-size: 14px; /* Smaller font size for tablets and phones */
+        padding: 8px;    /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .info {
+        font-size: 12px; /* Even smaller font size for small phones */
+        padding: 6px;    /* Further adjust padding for small screens */
+    }
+}
+

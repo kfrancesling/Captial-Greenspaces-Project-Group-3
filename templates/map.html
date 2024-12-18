@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links to the Leaflet CSS for map styling -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Links to custom CSS for additional vector map styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vectorstyles.css') }}" />
+    <!-- Links to the Leaflet JavaScript library for interactive maps -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="map">
+        <!-- Control panel for selecting biomass ranges -->
+        <div id="controls">
+            <h2>Biomass Range (kg/m²)</h2>
+            <button id="range-all">All</button>
+            <button id="range-0-100">0-100</button>
+            <button id="range-100-500">100-500</button>
+            <button id="range-500-1000">500-1000</button>
+            <button id="range-1000-1500">1000-1500</button>
+        </div>
+        <!-- Tree cards/info placeholder -->
+        <div id="sidebar"></div>
+    </div>
+    <!-- Embeds the Mapbox API key for map functionality -->
+    <script> const mapboxApiKey = "{{ mapbox_key }}"; </script>
+    <!-- js for vector map using Jinga-->
+    <script src="{{ url_for('static', filename='js/vectormap.js') }}"></script>
+</body>
+</html>
