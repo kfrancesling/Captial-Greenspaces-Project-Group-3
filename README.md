@@ -81,7 +81,10 @@ The AJAX technique was used to allow the website to query the database continuou
 
  
 ### Deployment of the website 
-How it is deployed 
+
+To make our web application available online for public access, fistly we used SSH to connect to the devapps virtul machine. Then we used command below to run our application. Our app-name is "app", and the module-name is "roseburnbiomass". 
+
+``` SCRIPT_NAME=/dev/<app-name> gunicorn --bind 0.0.0.0:<port> <module-name>:app```
 
  
 
@@ -123,29 +126,23 @@ An environment variable is a dynamic value in an operating system that can affec
 
 On Windows: 
 
-set MAPBOX_API_KEY= pk.eyJ1Ijoia2ZyYW5jZXNsaW5nIiwiYSI6ImNtNHNnMDIzajAwZnEybHFtMXdwM3JlOXEifQ.8HO4zb1PGp2Pa7O7kWKbFw 
+```set MAPBOX_API_KEY= pk.eyJ1Ijoia2ZyYW5jZXNsaW5nIiwiYSI6ImNtNHNnMDIzajAwZnEybHFtMXdwM3JlOXEifQ.8HO4zb1PGp2Pa7O7kWKbFw ```
 
 On Linux or Mac: 
 
-export MAPBOX_API_KEY= pk.eyJ1Ijoia2ZyYW5jZXNsaW5nIiwiYSI6ImNtNHNnMDIzajAwZnEybHFtMXdwM3JlOXEifQ.8HO4zb1PGp2Pa7O7kWKbFw 
-
-
-
-### Password file 
+```export MAPBOX_API_KEY= pk.eyJ1Ijoia2ZyYW5jZXNsaW5nIiwiYSI6ImNtNHNnMDIzajAwZnEybHFtMXdwM3JlOXEifQ.8HO4zb1PGp2Pa7O7kWKbFw ```
 
  
 
- 
+### Password
+
+Navigate to the 60th line of fetchdata.py and replace the username into your UUN. Then create a file named databasepassword.txt in your currently home directory. In next step you need type the password of your Oracle database into it. 
+
+
 
 ### Opening the data 
 
-Navigate to the correct directory in your terminal and enter the text “python3 app.py”. This is not working right now, due to key error?  
-
- 
-
-### 
-
-### 
+Navigate to the correct directory in your terminal and enter the app.py. Then run the app.py and get the link in the terminal. Hold control and click on the link to access our webpage.
 
  
 
@@ -181,4 +178,3 @@ If you wish to learn more about the Roseburn path or want to learn how to best g
  
  
 
- # Captial-Greenspaces-Project-Group-3
